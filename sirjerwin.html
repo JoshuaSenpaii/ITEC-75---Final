@@ -6,35 +6,12 @@
     <title>Our Project Portfolio | Team FAQ.J</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Custom CSS for animations and effects */
-        .card-hover:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        
-        .team-member:hover .member-img {
-            transform: scale(1.05);
-        }
-        
-        .progress-bar {
-            transition: width 1.5s ease-in-out;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        .fade-in {
-            animation: fadeIn 1s ease-in;
-        }
-    </style>
+    <link href="index.css" rel="stylesheet" type="text/css">
 </head>
 <body class="bg-gray-50 font-sans">
     <!-- Navigation -->
     <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4">
+        <div class="max-w-[80%] mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center space-x-4">
                     <div class="text-2xl font-bold text-indigo-600">Team<span class="text-gray-800">FAQ.J</span></div>
@@ -43,8 +20,6 @@
                     <a href="#home" class="text-indigo-600 font-medium">Home</a>
                     <a href="#project" class="text-gray-700 hover:text-indigo-600 transition">Project</a>
                     <a href="#team" class="text-gray-700 hover:text-indigo-600 transition">Team</a>
-
-                    <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
                 </div>
                 <div class="md:hidden">
                     <button id="menu-btn" class="text-gray-700 focus:outline-none">
@@ -65,20 +40,31 @@
 
     <!-- Hero Section -->
     <section id="home" class="py-20 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[80%] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-between">
-                <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+                <div class="md:w-1/3 mb-10 md:mb-0 fade-in">
                     <h1 class="text-4xl md:text-5xl font-bold mb-6">FAQ.J</h1>
-                    <p class="text-xl mb-8">We are a team of four passionate students from CvSU-CCAT,<br> working together to create something amazing. By combining our diverse skills and knowledge, <br>we aim to deliver outstanding results.</p>
+                    <p class="text-xl mb-8">We are a team of four passionate students from CvSU-CCAT Rosario Campus, working together to create something amazing. By combining our diverse skills and knowledge, we aim to deliver outstanding results.</p>
                     <div class="flex space-x-4">
                         <a href="#project" class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300">View Project</a>
                         <a href="#team" class="border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-indigo-600 transition duration-300">Meet the Team</a>
                     </div>
                 </div>
-                <div class="md:w-1/2 fade-in">
-                    <img src="gitpic.png" 
-                         alt="Team working together" 
-                         class="rounded-xl shadow-2xl w-full h-auto">
+
+                <div class="md:w-3/5 fade-in relative h-[500px] overflow-hidden rounded-xl shadow-2xl">
+                    <div id="iframe-carousel" class="flex h-full w-full transition-transform duration-500 ease-in-out">
+                        <iframe src="https://paowixx.github.io/fherpacumio.github.io" class="flex-shrink-0 w-full h-full border-none"></iframe>
+                        <iframe src="https://acesguerra.github.io/ace.github.io" class="flex-shrink-0 w-full h-full border-none"></iframe>
+                        <iframe src="https://queenie137.github.io/Queenie-Nogales.github.io" class="flex-shrink-0 w-full h-full border-none"></iframe>
+                        <iframe src="https://JoshuaSenpaii.github.io" class="flex-shrink-0 w-full h-full border-none"></iframe>
+                    </div>
+
+                    <button id="prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-200 focus:outline-none transition-all duration-300 z-10">
+                        <i class="fas fa-chevron-left text-gray-800"></i>
+                    </button>
+                    <button id="next-btn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-200 focus:outline-none transition-all duration-300 z-10">
+                        <i class="fas fa-chevron-right text-gray-800"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -86,51 +72,60 @@
 
     <!-- Project Section -->
     <section id="project" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[80%] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Project</h2>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Projects</h2>
                 <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
                 <p class="mt-4 text-gray-600 max-w-2xl mx-auto">An innovative solution developed by our team to address real-world challenges.</p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                 <div class="bg-gray-50 p-8 rounded-xl shadow-md card-hover transition duration-300">
                     <div class="text-indigo-600 text-4xl mb-4">
-                        <i class="fas fa-lightbulb"></i>
+                        <i class="fas fa-code"> Portfolio</i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Project Concept</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Fher Pacumio</h3>
                     <p class="text-gray-600">Our portfolio features the project we created as students of CvSU-CCAT. It highlights the system we developed, showcasing its features, design, and how it works. This project allowed us to apply our knowledge and skills in building a functional system that integrates well with existing processes.</p>
                 </div>
-                
+
                 <div class="bg-gray-50 p-8 rounded-xl shadow-md card-hover transition duration-300">
                     <div class="text-indigo-600 text-4xl mb-4">
-                        <i class="fas fa-cogs"></i>
+                        <i class="fas fa-code"> Portfolio</i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Technical Details</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Ace Esguerra</h3>
                     <p class="text-gray-600">Our system is built using fundamental web technologies, HTML and CSS. It features a clean, responsive user interface designed to work smoothly across different devices.</p>
                 </div>
-            </div>
-            
-            <div class="bg-indigo-50 p-8 rounded-xl shadow-md">
-                <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">Project Features</h3>
-               
-                    <div class="bg-white p-6 rounded-lg shadow-sm text-center card-hover transition duration-300">
-                        <div class="text-indigo-600 text-3xl mb-3">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h4 class="font-semibold mb-2">Responsive Design</h4>
-                        <p class="text-gray-600 text-sm">Works perfectly on all devices from mobile to desktop.</p>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md card-hover transition duration-300">
+                    <div class="text-indigo-600 text-4xl mb-4">
+                        <i class="fas fa-code"> Portfolio</i>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-sm text-center card-hover transition duration-300">
-                        <div class="text-indigo-600 text-3xl mb-3">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <h4 class="font-semibold mb-2">Fast Performance</h4>
-                        <p class="text-gray-600 text-sm">Optimized for speed with minimal loading times.</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Queenie Nogales</h3>
+                    <p class="text-gray-600">Our system is built using fundamental web technologies, HTML and CSS. It features a clean, responsive user interface designed to work smoothly across different devices.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md card-hover transition duration-300">
+                    <div class="text-indigo-600 text-4xl mb-4">
+                        <i class="fas fa-code"></i>
                     </div>
-                    
-                       
-                    
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Joshua Sanchez</h3>
+                    <p class="text-gray-600">Our system is built using fundamental web technologies, HTML and CSS. It features a clean, responsive user interface designed to work smoothly across different devices.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md card-hover transition duration-300">
+                    <div class="text-indigo-600 text-4xl mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Joshua Sanchez</h3>
+                    <p class="text-gray-600">Our system is built using fundamental web technologies, HTML and CSS. It features a clean, responsive user interface designed to work smoothly across different devices.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md card-hover transition duration-300">
+                    <div class="text-indigo-600 text-4xl mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Joshua Sanchez</h3>
+                    <p class="text-gray-600">Our system is built using fundamental web technologies, HTML and CSS. It features a clean, responsive user interface designed to work smoothly across different devices.</p>
                 </div>
             </div>
         </div>
@@ -155,14 +150,14 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-1">Ace Darwin B. Esguerra</h3>
-                        <p class="text-indigo-600 font-medium mb-3">Documentator</p>
-                        <p class="text-gray-600 mb-4">Responsible for preparing, organizing, and writing all project documentation, including research papers, technical reports, user manuals, and system guides. Ensures all written outputs are clear, complete, and aligned with project requirements.</p>
+                        <p class="text-indigo-600 font-medium mb-3">Web Developer</p>
                         <div class="flex space-x-3">
-                            
-                            <a href="https://github.com/acesguerra/ace.github.io" class="text-gray-500 hover:text-indigo-600 transition"><i class="fab fa-github"></i></a>
-                            <a href="https://acesguerra.github.io/ace.github.io" class="text-gray-500 hover:text-indigo-600 transition"><i class="fas fa-folder-open"></i></a>
-
-                           
+                            <a href="https://github.com/acesguerra/ace.github.io" class="text-gray-500 hover:text-indigo-600 transition">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://acesguerra.github.io/ace.github.io" class="text-gray-500 hover:text-indigo-600 transition">
+                                <i class="fas fa-folder-open"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -229,86 +224,6 @@
             </div>
         </div>
     </section>
-    <section id="contact" class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Get In Touch</h2>
-                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
-                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Have questions about our project? Want to collaborate? Reach out to us!</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-6">Contact Information</h3>
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="text-indigo-600 text-xl mr-4 mt-1">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-800">Location</h4>
-                                <p class="text-gray-600">123 University Ave, Tech City, TC 12345</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="text-indigo-600 text-xl mr-4 mt-1">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-800">Email</h4>
-                                <p class="text-gray-600">teamfour@project.edu</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="text-indigo-600 text-xl mr-4 mt-1">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-800">Phone</h4>
-                                <p class="text-gray-600">(123) 456-7890</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-10">
-                        <h3 class="text-xl font-bold text-gray-800 mb-6">Follow Us</h3>
-                       <div class="flex space-x-4 items-center">
-    
-    <a href="https://www.facebook.com/AceEsguerra.07" class="flex items-center space-x-2">
-        <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition">
-            <i class="fab fa-facebook-f"></i>
-        </div>
-        <span class="text-gray-700">Ace Esguerra</span>
-    </a>
-
-    <a href="https://www.facebook.com/KwekkwekPizza" class="flex items-center space-x-2">
-        <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition">
-            <i class="fab fa-facebook-f"></i>
-        </div>
-        <span class="text-gray-700">Queenie Nogales</span>
-    </a>
-
-    <a href="https://www.facebook.com/perpaoo/" class="flex items-center space-x-2">
-        <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition">
-            <i class="fab fa-facebook-f"></i>
-        </div>
-        <span class="text-gray-700">Fher Pacumio</span>
-    </a>
-
-    <a href="https://www.facebook.com/aaauhsoJ" class="flex items-center space-x-2">
-        <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition">
-            <i class="fab fa-facebook-f"></i>
-        </div>
-        <span class="text-gray-700">Joshua Sanchez</span>
-    </a>
-
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
@@ -323,6 +238,44 @@
                     <ul class="space-y-2">
                         <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
                         <li><a href="#project" class="text-gray-400 hover:text-white transition">Project</a></li>
-                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.getElementById('iframe-carousel');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const iframes = carousel.querySelectorAll('iframe');
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                const offset = -currentIndex * 100;
+                carousel.style.transform = `translateX(${offset}%)`;
+            }
+
+            nextBtn.addEventListener('click', () => {
+
+                if (currentIndex < iframes.length - 1) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                updateCarousel();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = iframes.length - 1;
+                }
+                updateCarousel();
+            });
+        });
+    </script>
 </body>
 </html>
